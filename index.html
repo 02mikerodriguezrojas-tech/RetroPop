@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETRO POP | Neon Karaoke & Drinks</title>
+    <!-- Fuentes modernas y legibles sin píxeles -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --neon-blue: #00f2ff;
+            --neon-yellow: #fff200;
+            --neon-orange: #ff9d00;
+            --bg-dark: #05010a;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .font-title { font-family: 'Orbitron', sans-serif; }
+
+        /* Estilos Neón Limpios */
+        .neon-blue-text {
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 40px var(--neon-blue);
+        }
+
+        .neon-yellow-text {
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px var(--neon-yellow), 0 0 20px var(--neon-yellow), 0 0 40px var(--neon-yellow);
+        }
+
+        .neon-orange-text {
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px var(--neon-orange), 0 0 20px var(--neon-orange), 0 0 40px var(--neon-orange);
+        }
+
+        /* Bordes Neón */
+        .border-neon-blue {
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .border-neon-yellow {
+            border: 2px solid var(--neon-yellow);
+            box-shadow: 0 0 15px var(--neon-yellow);
+        }
+
+        .border-neon-orange {
+            border: 2px solid var(--neon-orange);
+            box-shadow: 0 0 15px var(--neon-orange);
+        }
+
+        /* Botones Neón */
+        .btn-neon {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            color: var(--neon-blue);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            overflow: hidden;
+            transition: 0.2s;
+            border: 2px solid var(--neon-blue);
+            font-weight: bold;
+        }
+
+        .btn-neon:hover {
+            color: #fff;
+            background: var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue), 0 0 40px var(--neon-blue), 0 0 80px var(--neon-blue);
+        }
+
+        /* Grid Background */
+        .grid-bg {
+            background-image: linear-gradient(rgba(0, 242, 255, 0.1) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(0, 242, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            mask-image: linear-gradient(to bottom, black, transparent);
+        }
+
+        .card-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-glass:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 bg-black/90 border-b border-blue-500/30 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="LOGO POP RETRO.png" alt="Retro Pop Logo" class="h-14 md:h-16 drop-shadow-[0_0_8px_var(--neon-blue)]">
+            </div>
+            
+            <ul class="hidden md:flex space-x-8 font-title text-xs tracking-widest items-center">
+                <li><a href="#inicio" class="hover:text-blue-400 transition-all">INICIO</a></li>
+                <li><a href="#levels" class="hover:text-yellow-400 transition-all">NIVELES</a></li>
+                <li><a href="#promo" class="hover:text-orange-400 transition-all">PROMO</a></li>
+                <li><a href="#contacto" class="btn-neon py-2 px-6">RESERVAR</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden px-6 text-center">
+        <div class="grid-bg"></div>
+        <div class="z-10">
+            <h1 class="font-title text-6xl md:text-8xl mb-4 neon-blue-text font-black tracking-tighter">RETRO POP</h1>
+            <p class="font-title text-lg md:text-xl text-yellow-400 tracking-[0.4em] mb-12">ESTILO NEÓN, ALMA RETRO</p>
+            
+            <div class="max-w-3xl mx-auto border-neon-blue rounded-lg overflow-hidden bg-black shadow-2xl">
+                <img src="Imagen1.png" alt="Level 1 Intro" class="w-full opacity-90">
+            </div>
+        </div>
+    </section>
+
+    <!-- Levels Gallery -->
+    <section id="levels" class="py-24 bg-zinc-950 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="font-title text-4xl neon-yellow-text mb-4">NIVELES DE DIVERSIÓN</h2>
+                <div class="h-1 w-24 bg-yellow-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Nivel 2 -->
+                <div class="card-glass p-6 border border-white/10 group">
+                    <span class="font-title text-xs text-blue-400 block mb-4 tracking-widest">STORY LEVEL 02</span>
+                    <div class="rounded-lg overflow-hidden mb-6 border-2 border-transparent group-hover:border-blue-400 transition-all">
+                        <img src="Imagen2.png" alt="Café" class="w-full">
+                    </div>
+                    <h3 class="font-title text-xl mb-3 neon-blue-text">ESPRESSO ENIGMA</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Comienza tu noche con la energía de nuestra barra de café premium.</p>
+                </div>
+
+                <!-- Nivel 4 -->
+                <div class="card-glass p-6 border border-white/10 group">
+                    <span class="font-title text-xs text-yellow-400 block mb-4 tracking-widest">STORY LEVEL 04</span>
+                    <div class="rounded-lg overflow-hidden mb-6 border-2 border-transparent group-hover:border-yellow-400 transition-all">
+                        <img src="Imagen3.png" alt="Disco" class="w-full">
+                    </div>
+                    <h3 class="font-title text-xl mb-3 neon-yellow-text">DISCO FEVER</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Baila entre luces neón y ritmos que nunca mueren.</p>
+                </div>
+
+                <!-- Nivel 7 -->
+                <div class="card-glass p-6 border border-white/10 group">
+                    <span class="font-title text-xs text-orange-400 block mb-4 tracking-widest">STORY LEVEL 07</span>
+                    <div class="rounded-lg overflow-hidden mb-6 border-2 border-transparent group-hover:border-orange-400 transition-all">
+                        <img src="Imagen4.png" alt="Entrada" class="w-full">
+                    </div>
+                    <h3 class="font-title text-xl mb-3 neon-orange-text">THE ENTRANCE</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">El acceso exclusivo al corazón de la cultura pop de los 80.</p>
+                </div>
+
+                <!-- Nivel 8 -->
+                <div class="card-glass p-6 border border-white/10 group">
+                    <span class="font-title text-xs text-blue-400 block mb-4 tracking-widest">STORY LEVEL 08</span>
+                    <div class="rounded-lg overflow-hidden mb-6 border-2 border-transparent group-hover:border-blue-400 transition-all">
+                        <img src="Imagen5.png" alt="Star" class="w-full">
+                    </div>
+                    <h3 class="font-title text-xl mb-3 neon-blue-text">STAR POWER</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Sube al escenario. El micrófono te espera para tu momento de gloria.</p>
+                </div>
+
+                <!-- Nivel 9 -->
+                <div class="card-glass p-6 border border-white/10 group lg:col-span-2 flex flex-col md:flex-row gap-8 items-center">
+                    <div class="w-full md:w-1/2 rounded-lg overflow-hidden border-2 border-transparent group-hover:border-orange-400 transition-all">
+                        <img src="Imagen6.png" alt="Brindis" class="w-full">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <span class="font-title text-xs text-orange-400 block mb-4 tracking-widest">FINAL LEVEL 09</span>
+                        <h3 class="font-title text-2xl mb-4 neon-orange-text">THE TOAST</h3>
+                        <p class="text-zinc-400 leading-relaxed mb-6">El brindis final con amigos. Cócteles diseñados para celebrar el ayer y el hoy.</p>
+                        <a href="#contacto" class="text-orange-400 font-title text-xs hover:underline tracking-widest">RESERVAR MESA VIP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section id="promo" class="py-24 bg-black overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2">
+                    <div class="relative p-2 border-neon-orange rounded-xl bg-zinc-900 overflow-hidden shadow-[0_0_30px_rgba(255,157,0,0.2)]">
+                        <video class="w-full rounded-lg" autoplay muted loop playsinline>
+                            <source src="Flayer Gif Retro.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute top-6 right-6 bg-orange-500 font-title text-[10px] px-3 py-1 rounded shadow-lg animate-pulse">PROMO ON</div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 space-y-10">
+                    <h2 class="font-title text-5xl neon-orange-text leading-tight">POWER UP!<br>TUS NOCHES</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6 p-4 border-l-4 border-yellow-400 bg-white/5">
+                            <span class="font-title text-yellow-400 text-2xl">01</span>
+                            <div>
+                                <h4 class="font-title text-sm text-white">CERVEZA 2 X 1</h4>
+                                <p class="text-xs text-zinc-500 uppercase mt-1">Todos los martes y miércoles</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 p-4 border-l-4 border-blue-400 bg-white/5">
+                            <span class="font-title text-blue-400 text-2xl">02</span>
+                            <div>
+                                <h4 class="font-title text-sm text-white">ALITAS ESPECIALES</h4>
+                                <p class="text-xs text-zinc-500 uppercase mt-1">Varios sabores desde $50</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 p-4 border-l-4 border-orange-400 bg-white/5">
+                            <span class="font-title text-orange-400 text-2xl">03</span>
+                            <div>
+                                <h4 class="font-title text-sm text-white">KARAOKE 20TEZ</h4>
+                                <p class="text-xs text-zinc-500 uppercase mt-1">La mejor acústica de la ciudad</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contacto" class="btn-neon w-full text-center">SOLICITAR ACCESO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="py-20 bg-zinc-950 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <img src="LOGO POP RETRO.png" alt="Logo" class="h-28 mx-auto mb-10 drop-shadow-[0_0_15px_rgba(0,242,255,0.5)]">
+            <h3 class="font-title text-xl neon-blue-text mb-12 uppercase tracking-[0.5em]">La noche es nuestra</h3>
+            
+            <div class="flex justify-center space-x-12 mb-16">
+                <a href="#" class="text-zinc-500 hover:text-blue-400 font-title text-xs tracking-widest transition-all">FACEBOOK</a>
+                <a href="#" class="text-zinc-500 hover:text-yellow-400 font-title text-xs tracking-widest transition-all">INSTAGRAM</a>
+                <a href="#" class="text-zinc-500 hover:text-orange-400 font-title text-xs tracking-widest transition-all">TIKTOK</a>
+            </div>
+
+            <div class="max-w-md mx-auto p-8 border border-white/10 rounded-2xl mb-12">
+                <p class="font-title text-[10px] text-zinc-500 mb-2">HORARIOS</p>
+                <p class="text-sm text-white font-bold mb-4 uppercase">Lun - Sab: 6PM - 2AM</p>
+                <p class="text-xs text-zinc-600">Sucursal Centro, Teziutlán</p>
+            </div>
+
+            <p class="text-[9px] text-zinc-800 font-title tracking-[0.3em]">© 2024 RETRO POP | PREMIUM EXPERIENCE</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efecto de parpadeo sutil para el logo
+        const logo = document.querySelector('nav img');
+        setInterval(() => {
+            if (Math.random() > 0.97) {
+                logo.style.filter = 'brightness(2.5) contrast(1.2) drop-shadow(0 0 20px #00f2ff)';
+                setTimeout(() => {
+                    logo.style.filter = 'drop-shadow(0 0 8px #00f2ff)';
+                }, 150);
+            }
+        }, 150);
+    </script>
+</body>
+</html>
